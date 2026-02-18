@@ -7550,13 +7550,12 @@ p {
     text-decoration: none;
 }
 
-
-/* Hide text on desktop */
+/* Show text on desktop */
 .logo-text {
-    display: none;
+    display: block;          /* 🔥 show on desktop */
     font-weight: 800;
-    font-size: 14px;
-    white-space: nowrap;   /* 🔥 prevents line break */
+    font-size: 19px;
+    white-space: nowrap;     /* Prevent line break */
 
     background: linear-gradient(
         90deg,
@@ -7570,6 +7569,11 @@ p {
     background-clip: text;
 }
 
+/* Desktop logo size */
+.logo-img {
+    height: 42px;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
 
@@ -7578,9 +7582,7 @@ p {
     }
 
     .logo-text {
-        display: block;
         font-size: 14px;
-        max-width: none;     /* 🔥 remove width restriction */
     }
 }
 
