@@ -7542,6 +7542,86 @@ p {
 }
 
 
+/* Logo container */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+
+/* Hide text on desktop */
+.logo-text {
+    display: none;
+    font-weight: 800;
+    font-size: 14px;
+    white-space: nowrap;   /* 🔥 prevents line break */
+
+    background: linear-gradient(
+        90deg,
+        #1f4db8 0%,
+        #6f7687 50%,
+        #f26522 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .logo-img {
+        height: 32px;
+    }
+
+    .logo-text {
+        display: block;
+        font-size: 14px;
+        max-width: none;     /* 🔥 remove width restriction */
+    }
+}
+
+
+.thankyou-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.thankyou-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+
+@keyframes popupFade {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.thankyou-box h3 {
+  margin-bottom: 10px;
+  color: #0b1c39;
+}
+
+.thankyou-box p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+
 
 
 

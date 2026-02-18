@@ -66,7 +66,9 @@
       alt="Wellworth Facilities Pvt Ltd Logo"
       class="logo-img"
     />
+    <span class="logo-text">Wellworth Facilities Pvt Ltd</span>
   </a>
+  
 </div>
 
                 
@@ -528,7 +530,7 @@ Tailored manpower.
     <button type="button"
             class="btn btn-primary"
             id="closeThankYouBtn">
-      Close
+      Send Request On Whatsapp
     </button>
   </div>
 </div>
@@ -1016,12 +1018,25 @@ Tailored manpower.
 
       <!-- RIGHT CARD -->
       <div class="apply-card apply-form-card">
+        <!-- THANK YOU POPUP -->
+<div class="thankyou-overlay" id="thankYouPopup">
+  <div class="thankyou-box">
+    <h3>Application Submitted Successfully 🎉</h3>
+    <p>Our HR team will contact you shortly.</p>
+    <button id="closePopupBtn" class="btn btn-primary">
+      Continue to WhatsApp
+    </button>
+  </div>
+</div>
+
+
         <h3>Career Application Form</h3>
         <p class="form-intro">
           Fill out the form and our HR team will contact you.
         </p>
 
-        <form class="career-apply-form">
+      <form class="career-apply-form" id="careerForm">
+
           <div class="form-group">
             <label>Full Name</label>
             <input type="text" placeholder="Enter your full name" required>
@@ -1063,11 +1078,12 @@ Tailored manpower.
           </button>
         </form>
       </div>
-
-    </div>
+ </div>
 
   </div>
 </section>
+
+
 
 <!-- ===============================
      CAREERS – FREQUENTLY ASKED QUESTIONS
@@ -1386,7 +1402,11 @@ Tailored manpower.
         </div>
     </footer>
 
+    
+
     <script src="main.js"></script>
 
 </body>
+
+
 </html>

@@ -492,5 +492,43 @@ ${message.value}
 
 });
 
+const careerForm = document.getElementById("careerForm");
+const popup = document.getElementById("thankYouPopup");
+const closeBtn = document.getElementById("closeThankYouBtn");
+
+if (careerForm) {
+  careerForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = careerForm.querySelectorAll("input")[0].value;
+const phone = careerForm.querySelectorAll("input")[1].value;
+const role = careerForm.querySelectorAll("select")[0].value;
+const location = careerForm.querySelectorAll("input")[2].value;
+const experience = careerForm.querySelectorAll("select")[1].value;
+
+const message = 
+`*New Career Application*
+
+*Name:* ${name}
+*Phone:* ${phone}
+*Preferred Role:* ${role}
+*Location:* ${location}
+*Experience:* ${experience}`;
+
+const link = 
+"https://wa.me/919921985050?text=" + encodeURIComponent(message);
+
+
+    // Attach click dynamically
+    closeBtn.onclick = function () {
+      popup.style.display = "none";
+      window.location.href = link;
+    };
+
+    popup.style.display = "flex";
+  });
+}
+
+
 
 
