@@ -6571,7 +6571,6 @@ p {
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    
 }
 
 .modal-overlay.active {
@@ -6582,7 +6581,10 @@ p {
     background: #ffffff;
     width: 100%;
     max-width: 460px;
-    padding: 30px;
+
+    /* Reduced padding only */
+    padding: 18px 22px;
+
     border-radius: 14px;
     position: relative;
     animation: popupScale 0.3s ease;
@@ -6601,75 +6603,71 @@ p {
 
 .modal-close {
     position: absolute;
-    top: 14px;
-    right: 16px;
-    font-size: 26px;
+    top: 12px;
+    right: 14px;
+    font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
+/* Reduced heading spacing */
+.modal-box h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+/* Reduced subtitle spacing */
 .modal-subtitle {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     color: #555;
+    font-size: 14px;
 }
 
+/* Reduced spacing between form fields */
 .popup-form .form-group {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 }
 
+/* Smaller label spacing */
+.popup-form label {
+    font-size: 13px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+/* Reduced input height */
 .popup-form input,
-.popup-form textarea {
+.popup-form select {
     width: 100%;
-    padding: 10px 12px;
+    padding: 7px 10px;
+    height: 34px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+/* Reduced textarea height */
+.popup-form textarea {
+    width: 100%;
+    padding: 7px 10px;
+    min-height: 65px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
 }
 
 .w-100 {
     width: 100%;
 }
 
-.section {
-  padding: 90px 0;
-}
-
-/* Reduce overall modal spacing */
-.modal-box {
-    padding: 20px 25px;  /* smaller padding */
-}
-
-/* Reduce space between fields */
-.popup-form .form-group {
-    margin-bottom: 12px;
-}
-
-/* Smaller label spacing */
-.popup-form label {
-    font-size: 14px;
-    margin-bottom: 4px;
-}
-
-/* Reduce input height */
-.popup-form input,
-.popup-form select {
-    padding: 8px 12px;
-    height: 38px;
-    font-size: 14px;
-}
-
-/* Reduce textarea height */
-.popup-form textarea {
-    min-height: 80px;   /* was probably 120+ */
-    padding: 8px 12px;
-    font-size: 14px;
-}
-
-/* Reduce button height slightly */
+/* Slightly smaller button */
 .popup-form .btn {
-    padding: 10px;
-    font-size: 15px;
+    padding: 9px;
+    font-size: 14px;
 }
+
+
 
 
 
