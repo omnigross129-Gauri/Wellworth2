@@ -263,6 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupForm = document.getElementById("popupForm");
     const thankYouPopup = document.getElementById("thankYouPopup");
     const closeBtn = document.getElementById("closeThankYouBtn");
+    const closeIconBtn = document.getElementById("closeThankYouIcon");
 
     let storedWhatsappURL = ""; // ✅ IMPORTANT
 
@@ -363,6 +364,13 @@ ${messageInput.value}
                 window.open(storedWhatsappURL, "_blank");
                 storedWhatsappURL = "";
             }
+        });
+    }
+
+    if (closeIconBtn && thankYouPopup) {
+        closeIconBtn.addEventListener("click", function () {
+            thankYouPopup.style.display = "none";
+            storedWhatsappURL = "";
         });
     }
 
@@ -528,7 +536,6 @@ const link =
     popup.style.display = "flex";
   });
 }
-
 
 
 
